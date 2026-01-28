@@ -21,7 +21,7 @@ passport.deserializeUser((obj, done) => {
 passport.use(new YandexStrategy({
         clientID: process.env.YANDEX_CLIENT_ID,
         clientSecret: process.env.YANDEX_CLIENT_SECRET,
-        callbackURL: "http://127.0.0.1:3000/auth/yandex/callback"
+        callbackURL: "http://127.0.0.1:3001/auth/yandex/callback"
     },
     (accessToken, refreshToken, profile, done) => {
         console.log('new YandexStrategy');
